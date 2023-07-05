@@ -1,8 +1,7 @@
 import { createContext } from "react";
-import { useState , useEffect } from "react";
+import { useState  } from "react";
 import { useCookies } from "react-cookie";
 import { makeAuthenticatedGETRequest } from "../utils/serverHelper";
-import { useLocation, useNavigate } from "react-router-dom";
 
 
 
@@ -17,8 +16,6 @@ const [updateTask , setUpdateTask] = useState({
    id:""
 })
 
-   // navigate hook 
- const navigate = useNavigate();
 
 // for which type user is available
 const [userType , setUserType] = useState('');
