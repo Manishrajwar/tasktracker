@@ -8,7 +8,6 @@ const User =require("./models/User")
 
 require("dotenv").config();
 const PORT = process.env.PORT;
-
 // middleware
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
