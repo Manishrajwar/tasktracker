@@ -10,11 +10,6 @@ export const AppContext = createContext();
 
 export default function AppContextProvider({children}){
    
-//  this is for update task
-const [updateTask , setUpdateTask] = useState({
-   show:false,
-   id:""
-})
 
 
 // for which type user is available
@@ -77,8 +72,7 @@ const [userType , setUserType] = useState('');
  getOwnTask,
  userType , 
  setUserType,
- updateTask,
- setUpdateTask
+ 
 
     };
 

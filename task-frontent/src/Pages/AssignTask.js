@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import Home from "./Home";
+import Task from "../Components/Task";
 import {  makeAuthenticatedPOSTRequest } from "../utils/serverHelper";
 import { AppContext } from "../Context/AppContext";
 import { useNavigate } from "react-router-dom";
@@ -45,7 +45,7 @@ function AssignTask() {
     },[])
 
   return (
-    <Home>
+    <Task>
       <form onSubmit={submitHandler} className="w-[70%] assign-container h-[90%] pt-[7%] overflow-hidden flex flex-col gap-10   ">
         <div className="flex gap-10 assign-input">
           <select value={formData.assignedUser} onChange={changeHandler} required name="assignedUser" >
@@ -78,11 +78,11 @@ function AssignTask() {
           />
         </div>
 
-        <textarea value={formData.description} onChange={changeHandler}  required name="description" id="description" cols="50" rows="50" placeholder="Enter the description" className=" resize-none bg-transparent border-2 border-black text-2xl font-semibold"></textarea>
+        <textarea value={formData.description} onChange={changeHandler}  required name="description" id="description" cols="10" rows="10" placeholder="Enter the description" className=" resize-none bg-transparent border-2 border-black text-2xl font-semibold"></textarea>
 
         <button  className="bg-blue-500  mx-auto px-10 py-4 rounded-full font-bold  text-black hover:bg-blue-600 duration-200">Assign</button>
       </form>
-    </Home>
+    </Task>
   );
 }
 
