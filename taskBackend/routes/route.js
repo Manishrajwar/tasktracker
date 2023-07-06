@@ -4,7 +4,7 @@ const route = express.Router();
 
 const {signup , login} = require("../controllers/auth");
 
-const {createTask ,deleteTask,getAllOwnTask,getTaskByUser  , getAllTask, getAllUserEmail,getAllCompletedTask,getAllCompleteTask , getPendingTask , getTaskById} = require("../controllers/task")
+const {createTask ,deleteTask,getAllOwnTask,getTaskByUser  , getAllTask, getAllUserEmail,getAllCompletedTask,getAllCompleteTask ,updateTask, getPendingTask , getTaskById} = require("../controllers/task")
 
 
 route.post("/signup" , signup);
@@ -12,6 +12,7 @@ route.post("/login",login);
 
 route.post("/create/task" ,passport.authenticate('jwt', { session: false }), createTask);
 
+route.put("/update/task" ,passport.authenticate('jwt', { session: false }), updateTask);
 route.get("/getAllTask" ,passport.authenticate('jwt', { session: false }), getAllTask);
 route.get("/getTaskById/:taskId" ,passport.authenticate('jwt', { session: false }), getTaskById);
 route.get("/getAllCompleteTask" ,passport.authenticate('jwt', { session: false }), getAllCompleteTask);

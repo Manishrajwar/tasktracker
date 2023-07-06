@@ -50,8 +50,8 @@ alert(response.message);
                  <input onChange={changeHandler} required type="password" name="password" className="mx-auto" placeholder="create Password"  />
 
                  <select onChange={changeHandler} required name="type" id="" className="mx-auto" >
-                 <option disabled selected value="">Select an option</option>
-
+                 <option disabled selected value="">Select status </option>
+ 
                     <option value="Admin">Admin</option>
                     <option value="User">User</option>
                  </select>

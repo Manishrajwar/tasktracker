@@ -60,7 +60,7 @@ function Login(){
                 <div className="flex flex-col ">
                 
                  <input onChange={changeHandler} required type="email" name="email" className="mx-auto" placeholder="Enter your email"  />
-                 <input onChange={changeHandler} required type="password" name="password" className="mx-auto" placeholder="create Password"  />
+                 <input onChange={changeHandler} required type="password" name="password" className="mx-auto" placeholder="Enter Password"  />
 
                 
                 </div>

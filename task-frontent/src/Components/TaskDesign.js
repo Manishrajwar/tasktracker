@@ -81,9 +81,7 @@ function TaskDesign({ Status, dueDate, description, title, id }) {
           } duration-200`}
         >
           <span title="done">
-            {" "}
             <IoCheckmarkDone />
-            {}
           </span>
         </button>
 

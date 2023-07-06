@@ -397,3 +397,31 @@ exports.getTaskById = async(req , res)=>{
   }
 }
 
+
+// ! update task 
+exports.updateTask =async(req ,res)=>{
+  try{
+    const {status , taskId} = req.body;
+    if(!status || !taskId){
+      return res.json({
+        success:false,
+        message:"please send the data",
+      })
+    }
+
+    const taskDetails  = await Task.findByIdAndUpdate({_id:taskId},{status:status});
+
+    return res.status(200).json({
+      success:true,
+      messsage:"successfully "
+    })
+
+
+  } catch(error){
+ console.log(error);
+ return res.status(500).json({
+  success:false,
+  message:"error in updage the task"
+ })
+  }
+}
