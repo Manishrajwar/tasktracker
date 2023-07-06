@@ -7,7 +7,7 @@ const app = express();
 const User =require("./models/User")
 
 require("dotenv").config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT ;
 // middleware
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
@@ -42,6 +42,9 @@ dbConnect();
 
 const route = require("./routes/route");
 app.use("/api/v1",route);
+
+
+
 
 app.listen(PORT, () => {
   console.log("app start at port 4000");
